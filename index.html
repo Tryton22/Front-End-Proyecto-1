@@ -1,0 +1,288 @@
+<html>
+    <!-- Head que muestra el nombre de la página y conecta con el archivo js, css y el framework Bootstrap -->
+    <head>
+        <title>Colegio Nueva Sabiduria</title>
+        <script src="js/funciones.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- Cuerpo de la página web, que muestra toda la información relevante -->
+    <body>
+        <!-- Barra superior con información de contacto -->
+        <div class="top-bar py-2"> <!-- Margen vertical de aprox 8 px -->
+            +56 90 154 3920 | contacto@nuevasabiduria.cl | admision@nuevasabiduria.cl | Av. Siempre Viva 2819 - Temuco
+        </div>
+
+        <!-- Menú con el logo, botones de acceso y admisión e información del colegio -->
+        <nav class="navbar bg-white py-3"> <!-- Fondo blanco y margen vertical de aprox 16 px -->
+            <div class="container">
+
+                <!-- Logo del colegio -->
+                <a class="navbar-brand" href="#"> 
+                    <img src="img/logo_colegio.png" alt="Logo" height="150">
+                </a>
+
+                <!-- Botones de información -->
+                <div>
+                    <button class="btn text-white" id="btn_login">
+                      <img src="img/login.png" alt="Persona" style="width: 20px; height: 20px; margin-right: 5px;">
+                      ACCESO APODERADOS Y ALUMNOS
+                    </button>
+                    <button class="btn text-white" id="btn_admision">
+                      <img src="img/admision.png" alt="Admision" style="width: 20px; height: 20px; margin-right: 5px;">
+                      ADMISIÓN
+                    </button>                
+                </div>
+
+                <!-- Menú de navegación -->
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <div class="btn-group" role="group" aria-label="Grupo de botones" style="border: none;">
+                            <button type="button" class="btn btn-white">
+                                <img src="img/inicio.png" alt="Inicio" style="width: 20px; height: 20px; margin-right: 5px;">
+                                Inicio
+                            </button>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                    <img src="img/colegio.png" alt="Colegio" style="width: 20px; height: 20px; margin-right: 5px;">
+                                    Mi Colegio
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">Saludo Rectoría</button></li>
+                                    <li><button class="dropdown-item" type="button">Misión y Visión</button></li>
+                                    <li><button class="dropdown-item" type="button">Actividades Extraprogramáticas</button></li>
+                                    <li><button class="dropdown-item" type="button">Proyecto Educativo Institucional</button></li>
+                                    <li><button class="dropdown-item" type="button">Organigrama</button></li>
+                                    <li><button class="dropdown-item" type="button">Valores</button></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                    <img src="img/comunidad.png" alt="Comunidad" style="width: 20px; height: 20px; margin-right: 5px;">
+                                    Comunidad
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">Horarios Entrevista</button></li>
+                                    <li><button class="dropdown-item" type="button">Noticias</button></li>
+                                    <li><button class="dropdown-item" type="button">Reglamento</button></li>
+                                    <li><button class="dropdown-item" type="button">Protocolos</button></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+                                    <img src="img/ciclos.png" alt="Ciclos" style="width: 20px; height: 20px; margin-right: 5px;">
+                                    Ciclos
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" type="button">Kinder</button></li>
+                                    <li><button class="dropdown-item" type="button">1° a 8° Básico</button></li>
+                                    <li><button class="dropdown-item" type="button">1° a 4° Medio</button></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-white" style="border: none;">
+                                <img src="img/unete.png" alt="Unete" style="width: 20px; height: 20px; margin-right: 5px;">
+                                Trabaja con nosotros
+                            </button>
+                            <button type="button" class="btn btn-white" style="border: none;">
+                                <img src="img/contacto.png" alt="Contacto" style="width: 20px; height: 20px; margin-right: 5px;">
+                                Contacto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carrusel con fotos informativas sobre el colegio para las personas -->
+        <div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+          
+                <!-- Lamina 1 -->
+                <div class="carousel-item active">
+                    <img src="img/foto_colegio.jpg" class="d-block imagen-carrusel" alt="Foto del colegio">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Bienvenidos a Nuestro Colegio</h5>
+                        <p>Formando estudiantes con valores y excelencia académica.</p>
+                    </div>
+              </div>
+          
+                <!-- Lamina 2 -->
+                <div class="carousel-item">
+                    <img src="img/actividades_extraprogramaticas.jpg" class="d-block imagen-carrusel" alt="Actividad estudiantil">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Actividades Extraprogramáticas</h5>
+                        <p>Descubre nuestros talleres deportivos, artísticos y científicos.</p>
+                    </div>
+                </div>
+          
+                <!-- Lamina 3 -->
+                <div class="carousel-item">
+                    <img src="img/admision_2025.jpg" class="d-block imagen-carrusel" alt="Admisión 2025">
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Admisión 2025 Abierta</h5>
+                        <p>Inscribe a tus hijos y sé parte de nuestra comunidad educativa.</p>
+                    </div>
+                </div>
+          
+            </div>
+          
+            <!-- Flechas para controlar el carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        
+        <!-- Cards que detalla los ciclos de enseñanza del colegio -->
+        <div class="container my-5">
+            <h3 class="titulo_texto text-center">Nuestros Ciclos Educativos</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              
+              <!-- Card: Kinder -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="img/kinder.jpg" class="card-img-top" alt="Kinder">
+                  <div class="card-body">
+                    <h6 class="cuerpo_texto">Ciclo Kinder</h6>
+                    <p>En nuestro ciclo de educación parvularia, promovemos el aprendizaje a través del juego, la creatividad y la exploración del entorno.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Card: Básica -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="img/basica.jpg" class="card-img-top" alt="Básica">
+                  <div class="card-body">
+                    <h6 class="cuerpo_texto">Enseñanza Básica</h6>
+                    <p>Fomentamos el desarrollo académico, social y emocional, preparando a nuestros estudiantes con bases sólidas para su futuro.</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Card: Media -->
+              <div class="col">
+                <div class="card h-100 shadow-sm">
+                  <img src="img/media.png" class="card-img-top" alt="Media">
+                  <div class="card-body">
+                    <h6 class="cuerpo_texto">Enseñanza Media</h6>
+                    <p>Formamos jóvenes con pensamiento crítico, autonomía y responsabilidad, listos para enfrentar los desafíos de la educación superior.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Texto demostrativo del compromiso del colegio -->
+        <div class="container text-center my-5">
+            <h3 class="titulo_texto">Nuestro Compromiso</h3>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+              
+                <div class="col">
+                    <img src="img/calidad_educativa.png" class="img-fluid mb-3" alt="Calidad Educativa" style="width: 80px; height: 80px;">
+                    <h6 class="cuerpo_texto">Calidad Educativa</h6>
+                    <p>Fomentamos una enseñanza de excelencia, centrada en el desarrollo integral del estudiante.</p>
+                </div>
+          
+                <div class="col">
+                    <img src="img/inclusion.png" class="img-fluid mb-3" alt="Inclusión y Diversidad" style="width: 80px; height: 80px;">
+                    <h6 class="cuerpo_texto">Inclusión y Diversidad</h6>
+                    <p>Valoramos la diversidad y promovemos un ambiente inclusivo para todos.</p>
+                </div>
+          
+                <div class="col">
+                    <img src="img/innovacion.png" class="img-fluid mb-3" alt="Innovación" style="width: 80px; height: 80px;">
+                    <h6 class="cuerpo_texto">Innovación</h6>
+                    <p>Incorporamos tecnología y nuevas metodologías para una educación moderna.</p>
+                </div>
+          
+                <div class="col">
+                    <img src="img/compromiso_social.png" class="img-fluid mb-3" alt="Compromiso Social" style="width: 80px; height: 80px;">
+                    <h6 class="cuerpo_texto">Compromiso Social</h6>
+                    <p>Trabajamos junto a la comunidad para generar un impacto positivo y duradero.</p>
+                </div>
+          
+            </div>
+          </div>
+
+        <!-- Imagenes que demuestran las universidades en convenio con el colegio -->
+        <div class="card mb-4" style="max-width: 80%; margin: auto; border: none;">
+            <div class="row g-0 align-items-center">
+              
+                <!-- Imagen a la izquierda -->
+                <div class="col-md-4">
+                    <h3 class="titulo_texto">Conoce nuestras Universidades en convenio y sus beneficios para nuestras y nuestros estudiantes.</h3>
+                </div>
+          
+              <!-- Contenido a la derecha -->
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/ufro_logo.png" class="img-fluid me-5" alt="Logo Ufro" style="width: 100px; height: 100px;">
+                            <img src="img/uct_logo.png" class="img-fluid me-5" alt="Logo Uct" style="width: 200px; height: 80px;">
+                            <img src="img/inacap_logo.png" class="img-fluid me-5" alt="Logo Inacap" style="width: 200px; height: 80px;">
+                            <img src="img/uah_logo.png" class="img-fluid me-5" alt="Logo Uah" style="width: 200px; height: 100px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>
+
+    <!-- Pie de página con información sobre el colegio y un formulario para recibir información -->
+    <footer>
+        <div class="container text-center text-md-left">
+            <!-- Columnas del footer-->
+            <div class="row text-center text-md-left">
+      
+                <!-- Columna 1: Quienes Somos -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <img src="img/logo_colegio.png" alt="Logo" height="150">
+                    <p class="cuerpo_texto" style="font-weight: 700;">
+                        Somos una comunidad educativa comprometida con la formación integral de nuestros estudiantes, basada en valores, excelencia académica y un ambiente inclusivo. 
+                        Nuestro colegio busca desarrollar el máximo potencial de cada alumno, fomentando la creatividad, el pensamiento crítico y la responsabilidad social.
+                        Desde nuestros niveles iniciales hasta la enseñanza media, trabajamos con vocación y dedicación para brindar una educación de calidad que prepare a nuestros jóvenes 
+                        para los desafíos del mundo actual, promoviendo el respeto, la empatía y el amor por el aprendizaje.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Formulario de contacto -->
+                <div class="col-md-6 col-lg-5 col-xl-5 mx-auto mt-3">
+                    <h3 class="titulo_formulario" style="color: #ebcc33; font-weight: 700;">Escríbenos</h3>
+                    <form id="cnt_formulario">
+                        <div class="form-group py-1">
+                            <input type="text" id="txt_nombre" class="form-control" placeholder="* Tu nombre">
+                        </div>
+                        <div class="form-group py-1">
+                            <input type="email" id="txt_email" class="form-control" placeholder="* Tu correo electrónico">
+                        </div>
+                        <div class="form-group py-1">
+                            <input type="text" id="txt_asunto" class="form-control" placeholder="* Asunto">
+                        </div>
+                        <p class="obligatorio text-muted mt-1">*Campos Obligatorios</p>
+                        <div class="form-group py-1">
+                            <textarea id="txt_mensaje" class="form-control py-1" rows="5" placeholder="Tu mensaje"></textarea>
+                        </div>
+                        <button type="button" id="btn_enviar" class="btn btn-warning px-4" onclick="enviarAsuntoColegio();">Enviar</button>
+                    </form>
+                </div>
+      
+                <!-- Línea divisoria -->
+                <hr>
+      
+                <!-- Derechos reservados -->
+                <div class="row align-left">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-left">© 2025 Todos los derechos reservados | <strong>Colegio Nueva Sabiduría</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
